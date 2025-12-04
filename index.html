@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Monet'nin gözünden Ege</title>
+    <style>
+        .dropdown-content {
+            display: none;
+        }
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown_button {display: none;}
+    </style>
 </head>
 <body>
-<h1 style="text-align:center;">"Monet'nin Gözünden Ege" Sanat Sergisi</h1>
+<div class="dropdown" style="display: flex; justify-content: flex-end">
+    <button class="dropdown_button">Dropdown</button>
+    <div class="dropdown-content">
+        <button onclick="translate_french()">Français</button>
+        <button onclick="translate_english()">English</button>
+        <button onclick="translate_turkish()">Türkçe</button>
+    </div>
+</div>
+    <h1 id="header1" style="text-align:center;">"Monet'nin Gözünden Ege" Sanat Projesi</h1>
+<script>
+    function translate_french(){
+        document.getElementById("header1").innerHTML = '"Égée vue par Monet" Projet d\'Art'
+    }
+    function translate_english(){
+        document.getElementById("header1").innerHTML = '"The Aegean through Monet\'s eyes" Art Project'
+    }
+    function translate_turkish(){
+        document.getElementById("header1").innerHTML = '"Monet\'nin Gözünden Ege" Sanat Projesi'
+    }
+</script>
 </body>
 </html>
