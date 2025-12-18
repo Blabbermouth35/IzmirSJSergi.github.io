@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <title>Monet'nin gözünden Ege</title>
     <style>
+        .background {
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-image: url('Screenshot 2025-12-11 at 14-28-21 Beautiful Beach View On Mediterranean Coast Stok Fotoğrafı 2612405831 Shutterstock.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            position: fixed;
+            background-attachment: fixed;
+            background-size: cover;
+            filter: blur(0px);
+            margin-top:0;
+        }
         .dropdown-content {
+            position: fixed;
             display: none;
+            z-index: 3;
         }
         .dropdown:hover .dropdown-content {display: block;}
         .dropdown:hover .dropdown_button {display: none;}
+        .dropdown{
+            z-index: 3;
+            position: fixed;
+            left: 0;
+            right: 10px;
+        }
+        .text{
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
+<div class="background"></div>
 <div class="dropdown" style="display: flex; justify-content: flex-end">
     <button class="dropdown_button">Dropdown</button>
     <div class="dropdown-content">
@@ -20,7 +51,9 @@
         <button onclick="translate_turkish()">Türkçe</button>
     </div>
 </div>
+<div class="text">
     <h1 id="header1" style="text-align:center;">"Monet'nin Gözünden Ege" Sanat Projesi</h1>
+</div>
 <script>
     function translate_french(){
         document.getElementById("header1").innerHTML = '"Égée vue par Monet" Projet d\'Art'
@@ -31,6 +64,12 @@
     function translate_turkish(){
         document.getElementById("header1").innerHTML = '"Monet\'nin Gözünden Ege" Sanat Projesi'
     }
+    document.addEventListener("scroll", () => {
+        // scroll_amount gives undefined every time. .style.filter = blur does not work
+        let scroll_amount = document.scrollTop();
+        document.getElementById("background").style.filter = `blur(${scroll_amount}px)`
+
+    });
 </script>
 </body>
 </html>
