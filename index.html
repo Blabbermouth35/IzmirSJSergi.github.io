@@ -110,7 +110,7 @@
     window.addEventListener("text", () => {
         const blur_amount = window.scrollY;
         document.querySelector(".background").style.filter = `blur(${blur_amount}px)`;
-        if (blur_amount === 12){
+        if (blur_amount >= 12){
             document.querySelector(".background").style.filter = `blur(12px)`;
         }
 
