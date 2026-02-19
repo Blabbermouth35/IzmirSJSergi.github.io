@@ -41,13 +41,20 @@
             left: 0;
             right: 10px;
         }
-        .text{
+        .title{
             position: fixed;
             left: 0;
             right: 0;
             z-index: 2;
         }
-        .scroll{
+        .text{
+            left: 0;
+            right: 0;
+            z-index: 2;
+            display: flex;
+            margin-right: 100px;
+            margin-left: 100px
+
         }
     </style>
 </head>
@@ -61,35 +68,33 @@
         <button onclick="translate_turkish()">Türkçe</button>
     </div>
 </div>
-<div class="text">
+<div class="title">
     <h1 id="header1" style="text-align:center;">"Monet'nin Gözünden Ege" Sanat Projesi</h1>
 </div>
-<div class="scroll">
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
-    <p>a</p>
+<br>
+<br>
+<br>
+<br>
+<div class="text">
+    <h2>Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur
+        Lorem ipsum dolor sit amet sequitur </h2>
 </div>
 <script>
     function translate_french(){
@@ -102,10 +107,15 @@
         document.getElementById("header1").innerHTML = '"Monet\'nin Gözünden Ege" Sanat Projesi'
     }
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("text", () => {
         const blur_amount = window.scrollY;
         document.querySelector(".background").style.filter = `blur(${blur_amount}px)`;
+        if (blur_amount === 12){
+            document.querySelector(".background").style.filter = `blur(12px)`;
+        }
+
     });
+
 
     //dropdown button does not close back on mobile
 </script>
