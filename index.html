@@ -3,7 +3,7 @@
 <head>
     <!-- this code is very unoptimised -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     <title>Monet'nin gözünden Ege</title>
     <style>
         html {
@@ -28,6 +28,7 @@
             background-size: cover;
             filter: blur(0px);
             margin-top:0;
+            visibility: visible;
         }
         .dropdown-content {
             position: fixed;
@@ -85,7 +86,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color:#bbccdd">
 <div class="background"></div>
 <div class="dropdown" style="display: flex; justify-content: flex-end">
     <button class="dropdown_button"></button>
@@ -325,23 +326,33 @@
     }
 
     window.addEventListener("scroll", () => {
-        const blur_amount = window.scrollY;
+        const blur_amount = window.scrollY * 0.5;
         if (blur_amount < 180) {
             document.querySelector(".background").style.filter = `blur(${blur_amount}px)`;
         }
         if (blur_amount >= 180){
             document.querySelector(".background").style.filter = `blur(180px)`;
+            if(blur_amount > 250) {
+                document.querySelector(".background").style.visibility = `hidden`;
+            }
+            if (blur_amount > 300) {
+                document.querySelector(".background").style.filter = `blur(0px)`;
+            }
+            if (blur_amount < 200) {
+                document.querySelector(".background").style.visibility = `visible`;
+            }
         }
         if (window.scrollY > 50) {
             document.querySelector(".text").style.visibility = `visible`;
         }
     });
 
-    //TODO: Remove background and blur after some scroll amount
+    //TODO: Create a switch case that handles the if statements
+    //TODO: Get a better background colour
 
     window.addEventListener("click", () => {
         document.querySelector(".dropdown_button").style.filter = `display: none`;
-        //TODO: dropdown button does not close back on mobile
+        //TODO: background is snowy on mobile
     });
 </script>
 </body>
