@@ -38,9 +38,8 @@
             position: fixed;
             display: none;
             z-index: 4;
+            height: 50px;
         }
-        .dropdown:hover .dropdown-content {display: block;}
-        .dropdown:hover .dropdown_button {display: none;}
         .dropdown{
             z-index: 4;
             position: fixed;
@@ -101,6 +100,11 @@
                 margin-right: 50px;
                 margin-left: 50px;
             }
+        }
+
+        @media (hover: hover) {
+            .dropdown:hover .dropdown-content {display: block;}
+            .dropdown:hover .dropdown_button {display: none;}
         }
 
     </style>
@@ -363,13 +367,6 @@
         }
     });
     //TODO: Get a better background colour
-
-    window.addEventListener("click", () => {
-        if (document.querySelector(".dropdown_button").style.display === 'none') {
-            document.querySelector(".dropdown_button").style.display = `block`;
-            document.querySelector(".dropdown-content").style.display = `none`;
-        }
-    });
 </script>
 </body>
 </html>
