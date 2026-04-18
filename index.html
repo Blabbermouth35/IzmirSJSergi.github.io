@@ -31,17 +31,6 @@
             opacity: 100%;
         }
 
-        @media screen and (max-width: 600px){
-            .background {
-                background-size: contain;
-                background-attachment: scroll;
-            }
-
-            .dropdown_button {
-                margin-top: 20px;
-            }
-        }
-
         .dropdown-content {
             position: fixed;
             display: none;
@@ -96,6 +85,21 @@
             position: absolute;
             visibility: hidden;
         }
+
+        @media screen and (max-width: 600px){
+            .background {
+                background-size: cover;
+                background-attachment: scroll;
+            }
+            .title {
+                margin-top: 50px;
+            }
+            .text {
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+        }
+
     </style>
 </head>
 <body style="background-color:#bbccdd">
