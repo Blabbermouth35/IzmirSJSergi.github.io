@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     <title>Monet'nin gözünden Ege</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Monet'in Gözünden Ege</title>
     <style>
         html {
             -ms-overflow-style: none;
@@ -333,12 +335,15 @@
 <script>
     function translate_french(){
         document.getElementById("header1").innerHTML = '"Égée vue par Monet" Projet d\'Art'
+        document.querySelector("title").innerText = "Égée vue par Monet"
     }
     function translate_english(){
         document.getElementById("header1").innerHTML = '"The Aegean through Monet\'s eyes" Art Project'
+        document.querySelector("title").innerText = "The Aegean through Monet\'s eyes"
     }
     function translate_turkish(){
         document.getElementById("header1").innerHTML = '"Monet\'nin Gözünden Ege" Sanat Projesi'
+        document.querySelector("title").innerText = "Monet\'nin Gözünden Ege"
     }
 
     window.addEventListener("scroll", () => {
