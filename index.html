@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     <title>Monet'nin gözünden Ege</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <title>Monet'in Gözünden Ege</title>
+    <title>Monet'nin Gözünden Ege</title>
     <style>
         html {
             -ms-overflow-style: none;
@@ -72,20 +72,6 @@
             font-weight: bold;
             position: absolute;
             visibility: visible;
-        }
-
-        .scroll{
-            left: 0;
-            right: 0;
-            z-index: 999;
-            display: flex;
-            margin-right: 100px;
-            margin-left: 100px;
-            text-align: center;
-            font-size: x-large;
-            font-weight: bold;
-            position: absolute;
-            visibility: hidden;
         }
 
         @media screen and (max-width: 600px){
@@ -367,6 +353,18 @@
         }
     });
     //TODO: Get a better background colour
+
+    if(window.matchMedia('(hover: none)').matches) {
+        document.querySelector(".dropdown_button").addEventListener("click", (x) => {
+            x.stopPropagation();
+            document.querySelector(".dropdown_button").style.display = `none`;
+            document.querySelector(".dropdown-content").style.display = `block`;
+        });
+        window.addEventListener("click", () => {
+            document.querySelector(".dropdown_button").style.display = `block`;
+            document.querySelector(".dropdown-content").style.display = `none`;
+        });
+    }
 </script>
 </body>
 </html>
