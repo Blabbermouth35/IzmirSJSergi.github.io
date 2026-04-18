@@ -367,12 +367,12 @@
     let clicked = 0;
     window.addEventListener("click", () => {
         if (clicked === 0) {
-            document.querySelector(".dropdown_button").style.filter = `display: block`;
-            document.querySelector(".dropdown-content").style.filter = `display: none`;
+            document.querySelector(".dropdown_button").style.display = `block`;
+            document.querySelector(".dropdown-content").style.display = `none`;
             clicked = 1
         } else if (clicked === 1) {
-            document.querySelector(".dropdown_button").style.filter = `display: block`;
-            document.querySelector(".dropdown-content").style.filter = `display: none`;
+            document.querySelector(".dropdown_button").style.display = `block`;
+            document.querySelector(".dropdown-content").style.display = `none`;
             clicked = 0
         }
     });
