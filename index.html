@@ -26,21 +26,21 @@
             position: fixed;
             background-attachment: fixed;
             background-size: cover;
-            filter: blur(0px);
             margin-top:0;
             visibility: visible;
+            opacity: 100%;
         }
         .dropdown-content {
             position: fixed;
             display: none;
-            z-index: 3;
+            z-index: 4;
         }
         .dropdown:hover .dropdown-content {display: block;}
         .dropdown:hover .dropdown_button {display: none;}
         .dropdown{
-            z-index: 3;
+            z-index: 4;
             position: fixed;
-            left: 0;
+            left: 95vw;
             right: 10px;
         }
         .dropdown_button{
@@ -60,15 +60,16 @@
         .text{
             left: 0;
             right: 0;
-            z-index: 999;
+            z-index: 3;
             display: flex;
             margin-right: 100px;
             margin-left: 100px;
+            margin-top: 90vh;
             text-align: center;
             font-size: x-large;
             font-weight: bold;
             position: absolute;
-            visibility: hidden;
+            visibility: visible;
         }
 
         .scroll{
@@ -326,28 +327,20 @@
     }
 
     window.addEventListener("scroll", () => {
-        const blur_amount = window.scrollY * 0.5;
-        if (blur_amount < 180) {
-            document.querySelector(".background").style.filter = `blur(${blur_amount}px)`;
+        const negative_opacity = window.scrollY * 0.20;
+        if (negative_opacity < 600) {
+            document.querySelector(".background").style.opacity = `${100 - negative_opacity}%`;
         }
-        if (blur_amount >= 180){
-            document.querySelector(".background").style.filter = `blur(180px)`;
-            if(blur_amount > 250) {
+        if (negative_opacity >= 600){
+            document.querySelector(".background").style.opacity = `0%`;
+            if(negative_opacity > 250) {
                 document.querySelector(".background").style.visibility = `hidden`;
             }
-            if (blur_amount > 300) {
-                document.querySelector(".background").style.filter = `blur(0px)`;
-            }
-            if (blur_amount < 200) {
-                document.querySelector(".background").style.visibility = `visible`;
-            }
+        if (negative_opacity < 200) {
+            document.querySelector(".background").style.visibility = `visible`;
         }
-        if (window.scrollY > 50) {
-            document.querySelector(".text").style.visibility = `visible`;
         }
     });
-
-    //TODO: Create a switch case that handles the if statements
     //TODO: Get a better background colour
 
     window.addEventListener("click", () => {
