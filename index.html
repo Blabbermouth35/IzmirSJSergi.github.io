@@ -181,22 +181,27 @@
 <div class="image">
     <div class="rouen">
         <img src="image7.png" alt="Claude Monet - Self-portrait in Beret">
-        <p class = text>Claude Monet - Self-Portrait with a Beret</p>
+        <p class = text id="Beret">Claude Monet - Bereli Otoportre</p>
     </div>
     <div class="rouen">
         <img src="image3.png" alt="Claude Monet - Poplars at the Epte">
-        <p class = text>Claude Monet - Poplars at the Epte</p>
+        <p class = text id="Pop">Claude Monet - Epte'deki Kavaklar</p>
     </div>
 </div>
 <div class="image">
     <div class="rouen">
         <img src="image1.png" alt="Claude Monet - Haystacks">
-        <p class = text>Claude Monet - Haystacks</p>
+        <p class = text id="Hay">Claude Monet - Saman yığınları</p>
     </div>
     <div class="rouen">
         <img src="image2.png" alt="Claude Monet - Water Lilies">
-        <p class = text>Claude Monet - ​Water Lilies</p>
+        <p class = text id="Water">Claude Monet - Nilüferler</p>
     </div>
+</div>
+<div class="credits">
+    <p class="credits" id="names">Web Sitesi Kurulumu: Poyraz Menteşeoğlu</p>
+    <p class="credits" id="names2">Tasarım ve Yazılar: Doğa Özaydın</p>
+    <p class="credits" id="names3"> </p>
 </div>
 <script>
     function translate_french(){
@@ -211,6 +216,13 @@
             "\n" +
             "Cela se manifeste dans la série de la Cathédrale de Rouen de Monet, qui illustre vivement les principes fondamentaux du mouvement. Chaque tableau représente la même structure sous le même angle, mais dans des conditions lumineuses et atmosphériques différentes. Qu’elle soit baignée dans les teintes pâles d’un matin d’hiver ou dans les tons chaleureux d’un soir d’été, la cathédrale se transforme sous l’effet de la lumière et de la couleur. À travers des tons superposés et contrastés, Monet offre non pas une image figée, mais une série d’impressions façonnées par le temps et la perception. Il nous fait découvrir sa vision unique et changeante. Nous voyons le monde à travers ses yeux, à travers son pinceau, tel qu’il l’a vu et vécu. Après tout, n’est-ce pas là ce qu’est l’art ? S’exprimer auprès d’autrui, d’un inconnu ou même de la société, de la manière que l’on maîtrise le mieux. Un moyen de partager notre monde intérieur avec les autres.\n"
         document.getElementById("Part3").innerHTML = "En fin de compte, les œuvres de Monet, telles que Nymphéas, Les Meules et Les Peupliers, dépassent la réalité objective perçue par l’œil humain et représentent la nature à travers l’harmonie de la lumière et de la couleur. Cette approche considère la peinture au-delà de son aspect décoratif, la transformant en un acte profondément personnel et expressif. Il en va de même pour d’autres artistes impressionnistes, tels qu’Alfred Sisley, Berthe Morisot, Edgar Degas, Édouard Manet, Camille Pissarro et Pierre-Auguste Renoir, qui dépassèrent tous les idéaux de la Renaissance afin de transmettre sur leurs toiles leurs univers spirituels et sensoriels.\n"
+        document.getElementById("Water").innerHTML = 'Claude Monet - Les Nymphéas'
+        document.getElementById("Hay").innerHTML = 'Claude Monet - Les Meules'
+        document.getElementById("Pop").innerHTML = 'Claude Monet - Peupliers sur l\'Epte'
+        document.getElementById("Beret").innerHTML = 'Claude Monet - Autoportrait coiffé d\'un béret'
+        document.getElementById("names3").innerHTML = 'Traduction en Français: Clara Kaysal'
+        document.getElementById("names").innerHTML = 'Création du site Web: Poyraz Menteşeoğlu'
+        document.getElementById("names2").innerHTML = 'Conception et texte: Doğa Özaydın'
     }
     function translate_english(){
         document.getElementById("header1").innerHTML = '"The Aegean through Monet\'s eyes" Art Project'
@@ -223,6 +235,13 @@
             "\n" +
             "This is exemplified in Monet’s Rouen Cathedral series, which vividly illustrates the movement’s central principles. Each painting presents the same structure from the same perspective, yet under different lighting and atmospheric conditions. Whether bathed in the pale hues of a winter morning or the warm tones of a summer evening, the cathedral is transformed by light and colour. Through layered, contrasting tones, Monet offers not a fixed image but a series of impressions shaped by time and perception. He introduces us to his unique and evolving perspective. We see the world through his eyes, through his brush, the way he saw and experienced it. After all, isn't that what art is?  To express ourselves to someone else, to a stranger or to society, even, in the way that we know best. A means of sharing our inner world with others. \n"
         document.getElementById("Part3").innerHTML = "Ultimately, Monet’s works, such as Water Lilies, Haystacks, and Poplars, go beyond the objective reality of the world perceived by the human eye and represent nature with the harmony of light and colour. This approach views painting beyond its decorative aspect, turning it into a deeply personal and expressive act. The same holds true for other Impressionist artists, including Alfred Sisley, Berthe Morisot, Edgar Degas, Édouard Manet, Camille Pissarro, and Pierre-Auguste Renoir, all of whom moved beyond Renaissance ideals to convey their spiritual and sensual worlds onto their canvas.\n"
+        document.getElementById("Water").innerHTML = 'Claude Monet - Water Lilies'
+        document.getElementById("Hay").innerHTML = 'Claude Monet - Haystacks'
+        document.getElementById("Pop").innerHTML = 'Claude Monet - Poplars at the Epte'
+        document.getElementById("Beret").innerHTML = 'Claude Monet - Self-Portrait with a Beret'
+        document.getElementById("names3").innerHTML = ' '
+        document.getElementById("names").innerHTML = 'Website Setup: Poyraz Menteşeoğlu'
+        document.getElementById("names2").innerHTML = 'Design and Text: Doğa Özaydın'
     }
     function translate_turkish(){
         document.getElementById("header1").innerHTML = '"Monet\'nin Gözünden Ege" Sanat Projesi'
@@ -236,6 +255,14 @@
             'Bu yaklaşımı en iyi gösteren örneklerden biri Monet’nin Rouen Katedrali serisidir. Her resim, aynı perspektiften aynı yapıyı farklı ışık ve atmosfer koşulları altında bize sunar. Rouen Katedrali ister kış sabahının soluk tonlarına bürünmüş, ister yaz akşamının sıcak tonlarıyla yıkanmış olsun, ışık ve renklerin etkileşimiyle bambaşka bir görünüme bürünüyor. Her ne kadar değişen tek şey aslında katedrali algılayış biçimimiz olsa da yapının kendisinin değiştiğinin izlenimine kapılıyoruz.\n'
         document.getElementById("Part3").innerHTML = 'Bunun yanı sıra Monet burada bize sabit bir görüntü sunmak yerine, kullandığı zıt tonlar ve hareketli fırça darbeleri aracılığıyla, bizlere kendisine özgü ve zamanla değişen bakış açısını tanıtıyor. Dünyayı onun gözünden, fırçasından, onun gördüğü ve deneyimlediği şekilde görmeye başlıyoruz biz de. Sonuçta sanat da bu değil midir zaten? Kendimizi bir başkasına, bir yabancıya ve hatta bir topluma, yapmayı en iyi bildiğimiz şekilde, bir kalem, fırça veya bir nota aracılığıyla ifade etmek, iç dünyamızı başkalarıyla paylaşmanın bir yolu değil midir sanat? \n' +
             'Sonuç olarak Monet’nin Nilüferler, Saman Yığınları ve Kavaklar gibi eserleri, doğayı olduğu gibi tuval üzerine kopyalamak yerine, dünyanın nesnel gerçekliğinin ötesine geçerek onu ışık ve rengin uyumuyla betimlemiştir. Bu yaklaşım, resim sanatını süregelen dekoratif anlayışın dışına çıkartmış ve onu son derece kişisel bir eyleme dönüştürmüştür. Aynı durum, Alfred Sisley, Berthe Morisot, Edgar Degas, Édouard Manet, Camille Pissarro ve Pierre-Auguste Renoir gibi diğer izlenimci (empresyonist) sanatçılar için de geçerlidir çünkü bu sanatçılar da Monet’nin izinden giderek Rönesans ideallerinin ötesine geçmiş ve manevi dünyalarını, izlenimlerini tuvallerine yansıtmışlardır.\n'
+        document.getElementById("Part3").innerHTML = "Ultimately, Monet’s works, such as Water Lilies, Haystacks, and Poplars, go beyond the objective reality of the world perceived by the human eye and represent nature with the harmony of light and colour. This approach views painting beyond its decorative aspect, turning it into a deeply personal and expressive act. The same holds true for other Impressionist artists, including Alfred Sisley, Berthe Morisot, Edgar Degas, Édouard Manet, Camille Pissarro, and Pierre-Auguste Renoir, all of whom moved beyond Renaissance ideals to convey their spiritual and sensual worlds onto their canvas.\n"
+        document.getElementById("Water").innerHTML = 'Claude Monet - Nilüferler'
+        document.getElementById("Hay").innerHTML = 'Claude Monet - Saman yığınları'
+        document.getElementById("Pop").innerHTML = 'Claude Monet - Epte\'deki Kavaklar'
+        document.getElementById("Beret").innerHTML = 'Claude Monet - Bereli Otoportre'
+        document.getElementById("names3").innerHTML = ' '
+        document.getElementById("names").innerHTML = 'Web Sitesi Kurulumu: Poyraz Menteşeoğlu'
+        document.getElementById("names2").innerHTML = 'Tasarım ve Yazılar: Doğa Özaydın'
     }
 
     window.addEventListener("scroll", () => {
