@@ -240,17 +240,11 @@
 
     window.addEventListener("scroll", () => {
         const negative_opacity = window.scrollY * 0.20;
-        if (negative_opacity < 600) {
+        if (negative_opacity < 300) {
             document.querySelector(".background").style.opacity = `${100 - negative_opacity}%`;
         }
-        if (negative_opacity >= 600){
+        if (negative_opacity >= 300){
             document.querySelector(".background").style.opacity = `0%`;
-            if(negative_opacity > 250) {
-                document.querySelector(".background").style.visibility = `hidden`;
-            }
-        if (negative_opacity < 200) {
-            document.querySelector(".background").style.visibility = `visible`;
-        }
         }
     });
     //TODO: Get a better background colour
